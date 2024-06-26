@@ -28,9 +28,19 @@ namespace JogoDaMemoriaT1
 
             int[,] jogo = new int[4, 4];
             int[,] tela = new int[4, 4];
+
+            Console.WriteLine("Entre com o nome do Player 1: ");
+            string nomeP1 = Console.ReadLine();
+
+            Console.WriteLine("Entre com o nome do Player 2: ");
+            string nomeP2 = Console.ReadLine();
+
             Player p1 = new Player("Marques");
 
-            Console.WriteLine(p1.Name);
+           
+            Console.WriteLine(p1.ToString());
+
+            Environment.Exit(0);
 
             //Para criar números aleatórios
             Random gerador = new Random();

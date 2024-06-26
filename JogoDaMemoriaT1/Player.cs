@@ -15,13 +15,35 @@ namespace JogoDaMemoriaT1
         //Métodos
         public Player(string name)
         {
-            _name = name;
+            Name = name;
+            _score = 0;
         }
 
+        //Propriedade
         public string Name
         {
+            set {
+                if(!String.IsNullOrEmpty(value))
+                    _name = value;
+            }
             get { return _name; }
         }
-
+        public int Score
+        {
+            set
+            {
+                if (value > 0)
+                    _score = value;
+            }
+            get
+            {
+                return _score;
+            }
+        }
+        public override string ToString()
+        {
+            return "Nome: " + Name +
+                   "\nPontuação: " + Score;
+        }
     }
 }
